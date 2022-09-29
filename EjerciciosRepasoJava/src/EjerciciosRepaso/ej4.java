@@ -3,6 +3,10 @@ package EjerciciosRepaso;
 import java.util.Scanner;
 
 public class ej4 {
+    /**
+     * Programa Java que solicita por pantalla una cantidad de números enteros (tanto positivos como negativos),
+     * los almacena en una array y a continuación hace la media de todos los números, los positivos y los negativos.
+     */
     static Scanner sc;
     static final int TOTAL_NUMBERS = 10;
 
@@ -19,7 +23,6 @@ public class ej4 {
         doAvg(numbers);
 
         sc.close();
-
     }
 
     private static void doAvg(int[] numbers) {

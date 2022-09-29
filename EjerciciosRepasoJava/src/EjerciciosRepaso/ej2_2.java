@@ -21,5 +21,7 @@ public class ej2_2 {
         double area = PI * radio * radio;
 
         System.out.println("La longitud de la circunferencia es de " + longitud + " y su área es de " + area);
+
+        sc.close();
     }
 }

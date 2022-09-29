@@ -17,5 +17,7 @@ public class ej2_1 {
         double tempFahrenheit = ( tempCelsius * 1.8) + 32;
 
         System.out.println("La temperatura media de hoy es de " + tempFahrenheit + " °F / " + tempCelsius + " °C");
+
+        sc.close();
     }
 }

@@ -1,7 +1,7 @@
 package EjerciciosRepaso;
 
 /**
- * Programa Java  que declara una variable b de tipo entero y a la que se le asigna un valor. A continuación se muestra
+ * Programa Java  que declara una variable b de tipo entero a la que se le asigna un valor. A continuación se muestra
  * un mensaje indicando si el valor de b es positivo o negativo.
  * @author María J. Duque
  */
