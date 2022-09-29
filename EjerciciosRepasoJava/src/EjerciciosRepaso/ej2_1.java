@@ -12,7 +12,7 @@ public class ej2_1 {
     public static void main(String[] args){
         sc = new Scanner(System.in);
 
-        System.out.println("Introduce la temperatura media de hoy");
+        System.out.println("Introduce la temperatura media de hoy:");
         double tempCelsius  = Double.parseDouble(sc.nextLine());
         double tempFahrenheit = ( tempCelsius * 1.8) + 32;
 

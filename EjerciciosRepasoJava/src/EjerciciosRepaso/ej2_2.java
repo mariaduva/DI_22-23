@@ -14,7 +14,7 @@ public class ej2_2 {
     public static void main(String[] args){
         sc = new Scanner(System.in);
 
-        System.out.println("Introduce el radio de la circunferencia");
+        System.out.println("Introduce el radio de la circunferencia:");
 
         double radio = Double.parseDouble(sc.nextLine());
         double longitud = 2 * PI * radio;

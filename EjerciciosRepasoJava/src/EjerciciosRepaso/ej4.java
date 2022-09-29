@@ -39,7 +39,7 @@ public class ej4 {
             }
         }
 
-        System.out.println("Media de los todos los números:" + printAvg(TOTAL_NUMBERS, (sumNeg + sumPos)));
+        System.out.println("Media de todos los números:" + printAvg(TOTAL_NUMBERS, (sumNeg + sumPos)));
         System.out.println("Media de los números positivos:" + printAvg(positiveNumbs, sumPos));
         System.out.println("Media de los números negativos:" + printAvg((TOTAL_NUMBERS - positiveNumbs), sumNeg));
 
@@ -51,7 +51,7 @@ public class ej4 {
         if (Double.isFinite(avg)) {
             msj = "(" + sumNum +" / " + amountNum + ") = " + avg;
         } else {
-            msj = "No determinado";
+            msj = "(" + sumNum +" / " + amountNum + ") = No determinado";
         }
         return msj;
     }

@@ -21,7 +21,6 @@ public class ej3 {
         int month = askMonth();
         int year = 0;
         int numDays = 0;
-        boolean leapYear = false;
 
         switch (month) {
             case 1: case 3: case 5:
@@ -35,8 +34,7 @@ public class ej3 {
                 break;
             case 2:
                 year = askYear();
-                isLeapYear(year);
-                if (leapYear) {
+                if (isLeapYear(year)){
                     numDays = 29;
                 } else {
                     numDays = 28;
@@ -48,12 +46,13 @@ public class ej3 {
 
         }
         if(numDays == 28 || numDays == 29){
-            if(leapYear) System.out.println(year + " es un año bisiesto. Por lo tanto, " + MONTHS[month - 1]
-                    + " tiene " + numDays + " dias.");
+            if(isLeapYear(year)) System.out.println(year + " es un año bisiesto. Por lo tanto, " + MONTHS[month - 1]
+                    + " tiene " + numDays + " días.");
             else System.out.println(year + " no es un año bisiesto. Por lo tanto, " + MONTHS[month - 1]
-                    + " tiene " + numDays + " dias.");
+                    + " tiene " + numDays + " días.");
+        } else {
+            System.out.println("El mes de " + MONTHS[month - 1] + " tiene " + numDays + " días.");
         }
-        System.out.println("El mes de " + MONTHS[month - 1] + " tiene " + numDays + " días.");
 
         sc.close();
     }
@@ -89,7 +88,7 @@ public class ej3 {
         while (isValid) {
             try {
                 System.out.println("Introduce un mes (1-12):");
-                month = sc.nextInt();
+                month = Integer.parseInt(sc.nextLine());
                 if (month < 1 || month > 12) {
                     throw new Exception();
                 }
