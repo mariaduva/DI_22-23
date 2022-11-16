@@ -1,8 +1,8 @@
-module com.ej3.ejercicio3addressapp {
+module com.example.adressapp {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens com.ej3.ejercicio3addressapp to javafx.fxml;
-    exports com.ej3.ejercicio3addressapp;
+    opens com.example.adressapp to javafx.fxml;
+    exports com.example.adressapp;
 }

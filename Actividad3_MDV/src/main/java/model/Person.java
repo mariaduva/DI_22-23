@@ -1,8 +1,14 @@
-package com.ej3.ejercicio3addressapp;
-
-import javafx.beans.property.*;
+package model;
 
 import java.time.LocalDate;
+
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 
 public class Person {
 
@@ -13,14 +19,19 @@ public class Person {
     private final StringProperty city;
     private final ObjectProperty<LocalDate> birthday;
 
+    /**
+     * Default constructor.
+     */
     public Person() {
         this(null, null);
     }
+
 
     public Person(String firstName, String lastName) {
         this.firstName = new SimpleStringProperty(firstName);
         this.lastName = new SimpleStringProperty(lastName);
 
+        // Some initial dummy data, just for convenient testing.
         this.street = new SimpleStringProperty("some street");
         this.postalCode = new SimpleIntegerProperty(1234);
         this.city = new SimpleStringProperty("some city");
