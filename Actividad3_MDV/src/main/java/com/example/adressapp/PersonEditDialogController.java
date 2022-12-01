@@ -34,15 +34,15 @@ public class PersonEditDialogController {
     private boolean okClicked = false;
 
     /**
-     * Initializes the controller class. This method is automatically called
-     * after the fxml file has been loaded.
+     *  Inicializa la clase controlador. Este método es llamado automáticamente
+     *  después de que el archivo fxml ha sido cargado.
      */
     @FXML
     private void initialize() {
     }
 
     /**
-     * Sets the stage of this dialog.
+     * Establece el escenario de este diálogo.
      *
      * @param dialogStage
      */
@@ -51,7 +51,7 @@ public class PersonEditDialogController {
     }
 
     /**
-     * Sets the person to be edited in the dialog.
+     * Establece la persona a ser editada en el diálogo.
      *
      * @param person
      */
@@ -68,7 +68,7 @@ public class PersonEditDialogController {
     }
 
     /**
-     * Returns true if the user clicked OK, false otherwise.
+     * Devuelve true si el usuario clicó OK, de lo contrario false.
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class PersonEditDialogController {
     }
 
     /**
-     * Called when the user clicks ok.
+     * Llamado cuando el usuario clickea OK.
      */
     @FXML
     private void handleOk() {
@@ -95,18 +95,13 @@ public class PersonEditDialogController {
     }
 
     /**
-     * Called when the user clicks cancel.
+     * Llamado cuando el usuario clickea Cancel.
      */
     @FXML
     private void handleCancel() {
         dialogStage.close();
     }
 
-    /**
-     * Validates the user input in the text fields.
-     *
-     * @return true if the input is valid
-     */
     private boolean isInputValid() {
         String errorMessage = "";
 

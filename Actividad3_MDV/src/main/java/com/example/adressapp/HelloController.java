@@ -29,7 +29,7 @@ public class HelloController {
     private Label birthdayLabel;
 
     // Reference to the main application.
-    private MainApp mainApp;
+    private HelloApplication mainApp;
 
 
     public HelloController() {
@@ -41,16 +41,16 @@ public class HelloController {
      */
     @FXML
     private void initialize() {
-        // Initialize the person table with the two columns.
+        // Inicializa la tabla de personas con dos columnas.
         firstNameColumn.setCellValueFactory(
                 cellData -> cellData.getValue().firstNameProperty());
         lastNameColumn.setCellValueFactory(
                 cellData -> cellData.getValue().lastNameProperty());
 
-        // Clear person details.
+        // Limpia los detalles de la persona.
         showPersonDetails(null);
 
-        // Listen for selection changes and show the person details when changed.
+        // Escucha los cambios en la selección de la tabla de personas y muestra los detalles de la persona cuando cambia.
         personTable.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> showPersonDetails(newValue));
     }
@@ -60,16 +60,16 @@ public class HelloController {
      *
      * @param mainApp
      */
-    public void setMainApp(MainApp mainApp) {
+    public void setMainApp(HelloApplication mainApp) {
         this.mainApp = mainApp;
 
-        // Add observable list data to the table
+        // Añade los datos de la lista observable a la tabla
         personTable.setItems(mainApp.getPersonData());
     }
 
     private void showPersonDetails(Person person) {
         if (person != null) {
-            // Fill the labels with info from the person object.
+            // Rellena las etiquetas con información de la persona.
             firstNameLabel.setText(person.getFirstName());
             lastNameLabel.setText(person.getLastName());
             streetLabel.setText(person.getStreet());
@@ -78,7 +78,7 @@ public class HelloController {
 
 
         } else {
-            // Person is null, remove all the text.
+            // Person es null, elimina todo el texto
             firstNameLabel.setText("");
             lastNameLabel.setText("");
             streetLabel.setText("");
@@ -93,7 +93,7 @@ public class HelloController {
         if (selectedIndex >= 0) {
             personTable.getItems().remove(selectedIndex);
         } else {
-            // Nothing selected.
+            // Nada seleccionado.
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.initOwner(mainApp.getPrimaryStage());
             alert.setTitle("No Selection");
@@ -127,7 +127,7 @@ public class HelloController {
             }
 
         } else {
-            // Nothing selected.
+            // Nada seleccionado.
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.initOwner(mainApp.getPrimaryStage());
             alert.setTitle("No Selection");
